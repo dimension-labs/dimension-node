@@ -1,0 +1,108 @@
+#[cfg(test)]
+use std::net::{Ipv4Addr, SocketAddr};
+use std::str::FromStr;
+
+use datasize::DataSize;
+use serde::{Deserialize, Serialize};
+
+use crate::types::TimeDiff;
+
+use super::PayloadWeights;
+
+/// Default binding address.
+///
+/// Uses a fixed port per node, but binds on any interface.
+const DEFAULT_BIND_ADDRESS: &str = "0.0.0.0:34553";
+
+/// Default public address.
+///
+/// Automatically sets the port, but defaults publishing localhost as the public address.
+const DEFAULT_PUBLIC_ADDRESS: &str = "127.0.0.1:0";
+
+/// Default interval for gossiping network addresses.
+const DEFAULT_GOSSIP_INTERVAL: &str = "30sec";
+
+// Default values for networking configuration:
+impl Default for Config {
+    fn default() -> Self {
+        Config {
+            bind_address: DEFAULT_BIND_ADDRESS.to_string(),
+            public_address: DEFAULT_PUBLIC_ADDRESS.to_string(),
+            known_addresses: Vec::new(),
+            gossip_interval: TimeDiff::from_str(DEFAULT_GOSSIP_INTERVAL).unwrap(),
+            initial_gossip_delay: TimeDiff::from_seconds(5),
+            max_addr_pending_time: TimeDiff::from_seconds(60),
+            max_outgoing_byte_rate_non_validators: 0,
+            max_incoming_message_rate_non_validators: 0,
+            estimator_weights: Default::default(),
+        }
+    }
+}
+
+/// Small network configuration.
+#[derive(DataSize, Debug, Clone, Deserialize, Serialize)]
+// Disallow unknown fields to ensure config files and command-line overrides contain valid keys.
+#[serde(deny_unknown_fields)]
+pub struct Config {
+    /// Address to bind to.
+    pub bind_address: String,
+    /// Publicly advertised address, in case the node has a different external IP.
+    ///
+    /// If the port is specified as `0`, it will be replaced with the actually bound port.
+    pub public_address: String,
+    /// Known address of a node on the network used for joining.
+    pub known_addresses: Vec<String>,
+    /// Interval in milliseconds used for gossiping.
+    pub gossip_interval: TimeDiff,
+    /// Initial delay before the first round of gossip.
+    pub initial_gossip_delay: TimeDiff,
+    /// Maximum allowed time for an address to be kept in the pending set.
+    pub max_addr_pending_time: TimeDiff,
+    /// Maximum number of bytes per second allowed for non-validating peers. Unlimited if 0.
+    pub max_outgoing_byte_rate_non_validators: u32,
+    /// Maximum of requests answered from non-validating peers. Unlimited if 0.
+    pub max_incoming_message_rate_non_validators: u32,
+    /// Weight distribution for the payload impact estimator.
+    pub estimator_weights: PayloadWeights,
+}
+
+#[cfg(test)]
+/// Reduced gossip interval for local testing.
+const DEFAULT_TEST_GOSSIP_INTERVAL: &str = "1sec";
+
+#[cfg(test)]
+/// Address used to bind all local testing networking to by default.
+const TEST_BIND_INTERFACE: Ipv4Addr = Ipv4Addr::LOCALHOST;
+
+#[cfg(test)]
+impl Config {
+    /// Construct a configuration suitable for testing with no known address that binds to a
+    /// specific address.
+    pub(super) fn new(bind_address: SocketAddr) -> Self {
+        Config {
+            bind_address: bind_address.to_string(),
+            public_address: bind_address.to_string(),
+            known_addresses: vec![bind_address.to_string()],
+            gossip_interval: TimeDiff::from_str(DEFAULT_TEST_GOSSIP_INTERVAL).unwrap(),
+            ..Default::default()
+        }
+    }
+
+    /// Constructs a `Config` suitable for use by the first node of a testnet on a single machine.
+    pub(crate) fn default_local_net_first_node(bind_port: u16) -> Self {
+        Config::new((TEST_BIND_INTERFACE, bind_port).into())
+    }
+
+    /// Constructs a `Config` suitable for use by a node joining a testnet on a single machine.
+    pub(crate) fn default_local_net(known_peer_port: u16) -> Self {
+        Config {
+            bind_address: SocketAddr::from((TEST_BIND_INTERFACE, 0)).to_string(),
+            public_address: SocketAddr::from((TEST_BIND_INTERFACE, 0)).to_string(),
+            known_addresses: vec![
+                SocketAddr::from((TEST_BIND_INTERFACE, known_peer_port)).to_string()
+            ],
+            gossip_interval: TimeDiff::from_str(DEFAULT_TEST_GOSSIP_INTERVAL).unwrap(),
+            ..Default::default()
+        }
+    }
+}

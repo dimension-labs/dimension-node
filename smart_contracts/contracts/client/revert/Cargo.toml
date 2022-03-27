@@ -1,0 +1,15 @@
+[package]
+name = "revert"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "revert"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

@@ -1,0 +1,17 @@
+[package]
+name = "faucet-stored"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "faucet_stored"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+faucet = { path = "../faucet" }
+dimension-types = { path = "../../../../types" }

@@ -1,0 +1,16 @@
+[package]
+name = "do-nothing-stored"
+version = "0.1.0"
+authors = ["Ed Hastings <ed@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "do_nothing_stored"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

@@ -1,0 +1,19 @@
+[package]
+name = "host-function-metrics"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+bench = false
+doctest = false
+test = false
+
+[features]
+default = ["dimension-contract/test-support", "rand/small_rng"]
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }
+rand = { version = "0.8.3", default-features = false }

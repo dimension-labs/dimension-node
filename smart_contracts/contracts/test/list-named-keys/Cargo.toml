@@ -1,0 +1,16 @@
+[package]
+name = "list-named-keys"
+version = "0.1.0"
+authors = ["Fraser Hutchison <fraser@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "list_named_keys"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

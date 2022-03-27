@@ -1,0 +1,151 @@
+[[accounts]]
+public_key = "012437f1344637f39485e46b8ef07f47861eaf4c1a961bb1b9fe67d12b0f2812ce"
+balance = "297900000000000000"
+
+[[accounts]]
+public_key = "01c77b650d8baa0c94458dd5415543d3dcb076408c80012fbc79f5363d228d2dd2"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "011fab185bd599672abfb4bf53165863fdc71a524842291a85d7bfb40cbebe94be"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "017d57afeb7d14c5b33ee9be70d9301ff6375f62e241983ee18959ea9064fed784"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "015cadc31bcf5021ac5f68ebc90c61466e90febcc4aed6f0ea5938b85db8766480"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01bc959b5aa6d17774f509b60fdd1d5e2584e6da3f8a5170096e36fe2c07af3c2e"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "017906768f4f40f7d1ccad6017cbc5742eec7bd9f6fc377e78b7567a0f493bd2c3"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "012c6d8ccf98d87b7701f82234f085999a52d0ed62745097637c535ca5855e0df1"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01e80db9e5ab320f4eb1d5feb76c790d569cef6c241955039db49452c60368d1a8"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01ed88c7cc2939a4260fd602f02bfe3bf0f7c50346d32f8c1e249f0f6d00153095"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "0147949e7d2b119a7a04bb805ea79675128205480c55f3d53d25d5517798e640af"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01f563d0b517d1ba447d70dc77806689cd58586a80e5894ffdb12daf9f897b4381"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01d5849b50d39646666b1dcdce0c057af95a9f910c5fb680a68eeec1dd99ae09c2"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01982fe592df7fdc1a447c4b2cfeef5f34d2f7cd10d99bdc6b1fc1d9a47258656b"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "0131bb1e134b87d02712a7dd3d37b85d2e14d46150a6853e17e3eb8620931f6e0a"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01613c7dda7c45019e5eaa8814b6fcc06dd083987ba96781f5fb4dfc22721b0dfa"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01fa805ec0d8caebb8b3421f3510b870dcec3e5e49f41a6e4c9eefb2155ea65246"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "0134b11e0418574d6a1fde5ffabec1a92ecdd8ee82b370d16d186a0dfbda3105ad"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01fb4b0255d3f8761d1d64cf98ab24133964b8da4b4adeae4d7bacaf07ab6346d3"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "015f5387c4f5388eb337b9cc193b5a859143138f29a6b770178bc0e32f1b7c881e"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "01195d24d85f0732cefb7bc2fd1ae8c4c9de02467d6811d774d67ae1c142f83ebb"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10
+[[accounts]]
+public_key = "010c611964db9c4c07d8c8781d5ff0434e4be00ebc1d69122b407844421a4d744d"
+balance = "0"
+
+[accounts.validator]
+bonded_amount = "100000000000000"
+delegation_rate = 10

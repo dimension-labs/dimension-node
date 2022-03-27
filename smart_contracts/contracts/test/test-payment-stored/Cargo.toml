@@ -1,0 +1,16 @@
+[package]
+name = "test-payment-stored"
+version = "0.1.0"
+authors = ["Henry Till <henrytill@gmail.com>", "Ed Hastings <ed@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "test_payment_stored"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

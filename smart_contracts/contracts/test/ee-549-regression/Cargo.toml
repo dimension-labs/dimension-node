@@ -1,0 +1,16 @@
+[package]
+name = "ee-549-regression"
+version = "0.1.0"
+authors = ["Michael Birch <birchmd@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "ee_549_regression"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

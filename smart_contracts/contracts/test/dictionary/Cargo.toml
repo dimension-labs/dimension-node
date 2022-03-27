@@ -1,0 +1,19 @@
+[package]
+name = "dictionary"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "dictionary"
+path = "src/bin/main.rs"
+bench = false
+doctest = false
+test = false
+
+[features]
+default = ["dimension-contract/default"]
+
+[dependencies]
+dimension-contract = { path = "../../../contract", default-features = false }
+dimension-types = { path = "../../../../types" }

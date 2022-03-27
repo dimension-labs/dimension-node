@@ -1,0 +1,16 @@
+[package]
+name = "mint-purse"
+version = "0.1.0"
+authors = ["Michael Birch <birchmd@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "mint_purse"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+dimension-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

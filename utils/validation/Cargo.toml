@@ -1,0 +1,30 @@
+[package]
+name = "dimension-validation"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[dependencies]
+anyhow = "1"
+base16 = "0.2.1"
+dimension-execution-engine = { path = "../../execution_engine" }
+dimension-types = { path = "../../types" }
+clap = "3.0.0-beta.5"
+derive_more = "0.99.13"
+hex = { version = "0.4.2", features = ["serde"] }
+serde = "1"
+serde_json = "1"
+thiserror = "1.0.18"
+
+[[test]]
+name = "validation_test"
+harness = false
+
+[[bin]]
+name = "dimension-validation"
+test = false
+doctest = false
+
+[lib]
+test = false
+doctest = false
