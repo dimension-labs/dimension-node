@@ -1,0 +1,16 @@
+[package]
+name = "ee-221-regression"
+version = "0.1.0"
+authors = ["Michał Papierski <michal@papierski.net>"]
+edition = "2018"
+
+[[bin]]
+name = "ee_221_regression"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

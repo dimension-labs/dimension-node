@@ -1,0 +1,24 @@
+[package]
+name = "casper-contract"
+version = "1.4.3" # when updating, also update 'html_root_url' in lib.rs
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+description = "A library for developing Dimension network smart contracts."
+readme = "README.md"
+documentation = "https://docs.rs/casper-contract"
+homepage = "https://dimensionlabs.io"
+repository = "https://github.com/DimensionLabs/dimension-node/tree/master/smart_contracts/contract"
+license-file = "../../LICENSE"
+
+[dependencies]
+dimension-types = { version = "1.4.6", path = "../../types" }
+hex_fmt = "0.3.0"
+version-sync = { version = "0.9", optional = true }
+wee_alloc = { version = "0.4.5", optional = true }
+
+[features]
+default = ["no-std-helpers"]
+no-std-helpers = ["wee_alloc"]
+test-support = []
+# DEPRECATED - enabling `std` has no effect.
+std = []

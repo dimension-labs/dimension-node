@@ -1,0 +1,16 @@
+[package]
+name = "purse-holder-stored-caller"
+version = "0.1.0"
+authors = ["Ed Hastings <ed@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "purse_holder_stored_caller"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

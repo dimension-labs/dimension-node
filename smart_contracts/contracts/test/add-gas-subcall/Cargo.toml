@@ -1,0 +1,16 @@
+[package]
+name = "add-gas-subcall"
+version = "0.1.0"
+authors = ["Fraser Hutchison <fraser@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "add_gas_subcall"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

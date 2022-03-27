@@ -1,0 +1,21 @@
+[package]
+name = "dimension-node-macros"
+version = "1.4.2"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+description = "A macro to create reactor implementations for the dimension-node."
+readme = "README.md"
+documentation = "https://docs.rs/dimension-node-macros"
+homepage = "https://dimensionlabs.io"
+repository = "https://github.com/DimensionLabs/dimension-node/tree/master/node_macros"
+license-file = "../LICENSE"
+
+[dependencies]
+indexmap = "1.6.0"
+Inflector = "0.11.4"
+proc-macro2 = "1.0.21"
+quote = "1.0.8"
+syn = { version = "1.0.40", features = ["full", "extra-traits"] }
+
+[lib]
+proc-macro = true

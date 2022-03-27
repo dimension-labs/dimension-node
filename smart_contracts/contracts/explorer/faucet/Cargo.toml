@@ -1,0 +1,16 @@
+[package]
+name = "faucet"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "faucet"
+path = "src/bin/main.rs"
+doctest = false
+test = false
+bench = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

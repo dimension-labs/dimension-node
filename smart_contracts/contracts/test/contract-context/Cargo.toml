@@ -1,0 +1,16 @@
+[package]
+name = "contract-context"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "contract_context"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

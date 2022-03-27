@@ -1,0 +1,15 @@
+[package]
+name = "undelegate"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "undelegate"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

@@ -1,0 +1,19 @@
+[package]
+name = "gh-1470-regression"
+version = "0.1.0"
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "gh_1470_regression"
+path = "src/bin/main.rs"
+bench = false
+doctest = false
+test = false
+
+[features]
+default = ["casper-contract/default"]
+
+[dependencies]
+casper-contract = { path = "../../../contract", default-features = false }
+dimension-types = { path = "../../../../types" }

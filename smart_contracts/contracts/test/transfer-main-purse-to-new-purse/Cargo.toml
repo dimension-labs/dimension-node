@@ -1,0 +1,16 @@
+[package]
+name = "transfer-main-purse-to-new-purse"
+version = "0.1.0"
+authors = ["Ed Hastings <ed@dimensionlabs.io>"]
+edition = "2018"
+
+[[bin]]
+name = "transfer_main_purse_to_new_purse"
+path = "src/main.rs"
+bench = false
+doctest = false
+test = false
+
+[dependencies]
+casper-contract = { path = "../../../contract" }
+dimension-types = { path = "../../../../types" }

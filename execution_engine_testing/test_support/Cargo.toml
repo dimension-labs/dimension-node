@@ -1,0 +1,30 @@
+[package]
+name = "casper-engine-test-support"
+version = "2.0.3" # when updating, also update 'html_root_url' in lib.rs
+authors = ["Adam Smith <adam@dimensionlabs.io>"]
+edition = "2018"
+description = "Library to support testing of Wasm smart contracts for use on the Dimension network."
+documentation = "https://docs.rs/casper-engine-test-support"
+readme = "README.md"
+homepage = "https://dimensionlabs.io"
+repository = "https://github.com/DimensionLabs/dimension-node/tree/master/execution_engine_testing/test_support"
+license-file = "../../LICENSE"
+
+[dependencies]
+dimension-execution-engine = { version = "1.4.4", path = "../../execution_engine", features = ["test-support"] }
+dimension-hashing = { version = "1.4.3", path = "../../hashing" }
+dimension-types = { version = "1.4.6", path = "../../types" }
+lmdb = "0.8.0"
+log = "0.4.14"
+num-rational = "0.4.0"
+num-traits = "0.2.14"
+once_cell = "1.8.0"
+rand = "0.8.4"
+
+[dev-dependencies]
+version-sync = "0.9.3"
+
+[features]
+use-as-wasm = []
+# deprecated - has no effect
+test-support = []
